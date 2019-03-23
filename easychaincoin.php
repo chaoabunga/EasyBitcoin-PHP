@@ -1,15 +1,14 @@
 <?php
 /*
-EasyBitcoin-PHP
+EasyChaincoin-PHP
 
-A simple class for making calls to Bitcoin's API using PHP.
-https://github.com/aceat64/EasyBitcoin-PHP
-
+A simple class for making calls to Chaincoin's API using PHP.
+https://github.com/chaoabunga/EasyChaincoin-PHP
 ====================
 
 The MIT License (MIT)
-
 Copyright (c) 2013 Andrew LeCody
+Copyright (c) 2019 chaoabunga
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -31,41 +30,41 @@ THE SOFTWARE.
 
 ====================
 
-// Initialize Bitcoin connection/object
-$bitcoin = new Bitcoin('username','password');
+// Initialize Chaincoin connection/object
+$chaincoin = new Chaincoin('username','password');
 
 // Optionally, you can specify a host and port.
-$bitcoin = new Bitcoin('username','password','host','port');
+$chaincoin = new Chaincoin('username','password','host','port');
 // Defaults are:
 //	host = localhost
-//	port = 8332
+//	port = 11995
 //	proto = http
 
 // If you wish to make an SSL connection you can set an optional CA certificate or leave blank
 // This will set the protocol to HTTPS and some CURL flags
-$bitcoin->setSSL('/full/path/to/mycertificate.cert');
+$chaincoin->setSSL('/full/path/to/mycertificate.cert');
 
 // Make calls to bitcoind as methods for your object. Responses are returned as an array.
 // Examples:
-$bitcoin->getinfo();
-$bitcoin->getrawtransaction('0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098',1);
-$bitcoin->getblock('000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f');
+$chaincoin->getinfo();
+$chaincoin->getrawtransaction('0e3e2357e806b6cdb1f70b54c3a3a17b6714ee1f0e68bebb44a74b1efd512098',1);
+$chain->getblock('000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f');
 
 // The full response (not usually needed) is stored in $this->response
 // while the raw JSON is stored in $this->raw_response
 
 // When a call fails for any reason, it will return FALSE and put the error message in $this->error
 // Example:
-echo $bitcoin->error;
+echo $chaincoin->error;
 
 // The HTTP status code can be found in $this->status and will either be a valid HTTP status code
 // or will be 0 if cURL was unable to connect.
 // Example:
-echo $bitcoin->status;
+echo $chaincoin->status;
 
 */
 
-class Bitcoin
+class Chaincoin
 {
     // Configuration options
     private $username;
@@ -92,7 +91,7 @@ class Bitcoin
      * @param string $proto
      * @param string $url
      */
-    public function __construct($username, $password, $host = 'localhost', $port = 8332, $url = null)
+    public function __construct($username, $password, $host = 'localhost', $port = 11995, $url = null)
     {
         $this->username      = $username;
         $this->password      = $password;
