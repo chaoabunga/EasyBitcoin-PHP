@@ -1,7 +1,7 @@
 EasyChaincoin-PHP
 ===============
 
-A simple class for making calls to Bitcoin's API using PHP.
+A simple class for making calls to Chaincoin's API using PHP.
 
 Getting Started
 ---------------
@@ -10,7 +10,7 @@ Getting Started
     ```php
     require_once('easychaincoin.php');
     ```
-2. Initialize Bitcoin connection/object:
+2. Initialize Chaincoincoin connection/object:
 
     ```php
     $chaincoin = new Chaincoin('username','password');
@@ -27,7 +27,7 @@ Getting Started
     $chaincoin->setSSL('/full/path/to/mycertificate.cert');
     ````
 
-3. Make calls to bitcoind as methods for your object. Examples:
+3. Make calls to chaincoind as methods for your object. Examples:
 
     ```php
     $chaincoin->getinfo();
@@ -41,6 +41,6 @@ Additional Info
 ---------------
 * When a call fails for any reason, it will return false and put the error message in `$chaincoin->error`
 
-* The HTTP status code can be found in $bitcoin->status and will either be a valid HTTP status code or will be 0 if cURL was unable to connect.
+* The HTTP status code can be found in $chaincoin->status and will either be a valid HTTP status code or will be 0 if cURL was unable to connect.
 
-* The full response (not usually needed) is stored in `$bitcoin->response` while the raw JSON is stored in `$chaincoin->raw_response`
+* The full response (not usually needed) is stored in `$chaincoin->response` while the raw JSON is stored in `$chaincoin->raw_response`
