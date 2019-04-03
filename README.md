@@ -1,3 +1,8 @@
+Updated April 3, 2019
+-sample.php
+-Sample verification system using the EasyChaincoin class.
+-Live sample website: https://www.chaincoinisland.com/verify/
+
 EasyChaincoin-PHP
 ===============
 
