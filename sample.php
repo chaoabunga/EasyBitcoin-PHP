@@ -113,9 +113,9 @@ if (isset($_POST['form_submitted'])) { //this code is executed when the form is 
 }
 else {
             echo '      <h2>Chaincoin Island Verification System</h2>
-	    <p>Instructions:  <p>1 - Input your Chaincoin masternode address.
+	    <p>Instructions:  <p>1 - Input your Chaincoin address with a 1000 CHC input.
 			      <p>2 - To be whitelisted to Chaincoin Island, message format: "chaincoinisland:USERNAME", replace USERNAME with your <a href="https://minecraft.net">Minecraft®</a>(Java) username.
-			      <p>3 - Signature derived the message signing from your wallet.
+			      <p>3 - Signature derived from signing the message in your wallet.
 	    <p>
 	    <table>
             <form action="index.php" method="POST">
